@@ -1,3 +1,5 @@
+package TMS2;
+
 import java.util.Scanner;
 
 public class Zadacha1 {

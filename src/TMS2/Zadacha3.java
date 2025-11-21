@@ -1,3 +1,5 @@
+package TMS2;
+
 public class Zadacha3 {
 
     public static void main(String[] args){

@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class Zadacha2_3 {
     public static void main(String[] args) {
-         System.out.println("Введите размер массива от 0 до 10");
+        System.out.println("Введите размер массива от 0 до 10");
         Scanner scanner = new Scanner(System.in);
         int size = scanner.nextInt();
         int[] mass = new int[size];
@@ -13,7 +13,8 @@ public class Zadacha2_3 {
         System.out.println("Введите элементы массива");
 
         for (int a = 0; a < size; a++) {
-            mass[a] = scanner.nextInt();}
+            mass[a] = scanner.nextInt();
+        }
 
         int min = mass[0];
         int max = mass[0];
@@ -45,7 +46,7 @@ public class Zadacha2_3 {
         System.out.println(Arrays.toString(mass));
         System.out.println("Минимальное число: " + min);
         System.out.println("Максимальное число: " + max);
-        System.out.println("Индекс максимально элемента "+maxIndex);
-        System.out.println("Индекс минимального элемента "+minIndex);
+        System.out.println("Индекс максимально элемента " + maxIndex);
+        System.out.println("Индекс минимального элемента " + minIndex);
     }
 }

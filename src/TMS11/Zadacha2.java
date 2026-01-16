@@ -12,7 +12,7 @@ public class Zadacha2 {
             stringArray[i] = scanner.nextLine();
         }
 
-        Arrays.sort(stringArray, (s1, s2)->s1.length()-s2.length());
+        Arrays.sort(stringArray, (s1, s2) -> s1.length() - s2.length());
 
         for (String s : stringArray) {
             System.out.println(s);

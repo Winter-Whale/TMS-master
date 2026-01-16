@@ -1,8 +1,8 @@
 package TMS7.zadacha1;
 
-class worker implements name {
+class Worker implements Name {
     @Override
-    public void JobTitle() {
+    public void jobTitle() {
         System.out.println("Должность: Рабочий");
     }
 }

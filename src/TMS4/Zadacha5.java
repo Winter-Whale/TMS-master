@@ -10,8 +10,8 @@ public class Zadacha5 {
         System.out.println("Введите размер массива до 10");
         Scanner scanner = new Scanner(System.in);
         int array = scanner.nextInt();
-        int[] mass = new int [array];
-        for (int i =0; i<array;i++){
+        int[] mass = new int[array];
+        for (int i = 0; i < array; i++) {
             mass[i] = random.nextInt(20);
         }
         System.out.println(Arrays.toString(mass));

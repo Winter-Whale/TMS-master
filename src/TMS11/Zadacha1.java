@@ -12,25 +12,19 @@ public class Zadacha1 {
         }
 
 
-        int minSize = stringArray[0].length();
         String minString = stringArray[0];
-        for (int i = 1; i < stringArray.length; i++) {
-            if (stringArray[i].length() < minSize) {
-                minString = stringArray[i];
-                minSize = stringArray[i].length();
-            }
-        }
-
-        int maxSize = stringArray[0].length();
         String maxString = stringArray[0];
         for (int i = 1; i < stringArray.length; i++) {
-            if (stringArray[i].length() > maxSize) {
+            if (stringArray[i].length() < minString.length()) {
+                minString = stringArray[i];
+            }
+            if (stringArray[i].length() > maxString.length()) {
                 maxString = stringArray[i];
-                maxSize = stringArray[i].length();
             }
         }
 
-        System.out.println("Минимальная строка = " + minString + ", ее длина = " + minSize);
-        System.out.println("Максимальная строка = " + maxString + ", ее длина = " + maxSize);
+
+        System.out.println("Минимальная строка = " + minString + ", ее длина = " + minString.length());
+        System.out.println("Максимальная строка = " + maxString + ", ее длина = " + maxString.length());
     }
 }

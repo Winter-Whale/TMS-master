@@ -4,24 +4,16 @@ import java.util.Scanner;
 
 public class Main {
 
-    Terapevt terapevt = new Terapevt();
-    Hirurg hirurg = new Hirurg();
-    Dantist dantist = new Dantist();
-    Patient patient = new Patient();
-    void main(String[] args){
-        System.out.println("Укажите жалобу: "+patient.getPlan1()+", "+patient.getPlan2()+", "+patient.getPlan3());
+    public static void main(String[] args){
+        System.out.println("Укажите жалобу: 1) Жалоба на стопу, 2) Жалоба на зубы, 3) Жалоба на кашель");
         Scanner scanner = new Scanner(System.in);
-        int a = scanner.nextInt();
-        if( a == 1){
-            System.out.println("Доктор: "+terapevt.name+" назначил врача: "+terapevt.name);
-            System.out.println("Врач "+terapevt.name+" "+terapevt.treatment());
-        }else if (a == 2){
-            System.out.println("Доктор: "+terapevt.name+" назначил врача: "+hirurg.name);
-            System.out.println("Врач "+hirurg.name+" "+hirurg.treatment());
-        } else if (a == 3){
-            System.out.println("Доктор: "+terapevt.name+" назначил врача: "+dantist.name);
-            System.out.println("Врач "+dantist.name+" "+dantist.treatment());
-        }
+        int reason = scanner.nextInt();
+        Patient patient = new Patient(reason);
+
+        Terapevt terapevt = new Terapevt();
+        terapevt.setDoctor(patient);
+        System.out.println(patient.getDoctor().treatment());
+
         System.out.println("Хорошего дня! Приходите к нам еще");
     }
 

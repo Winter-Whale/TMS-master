@@ -2,19 +2,19 @@ package TMS13;
 
 public class Zadacha1 {
 
-    class WrongLoginException extends Exception {
+    static class WrongLoginException extends Exception {
         public WrongLoginException(String message) {
             super(message);
         }
     }
 
-    class WrongPasswordException extends Exception {
+    static class WrongPasswordException extends Exception {
         public WrongPasswordException(String message) {
             super(message);
         }
     }
 
-    public boolean test(String login, String password, String confirmPassword)
+    public static boolean test(String login, String password, String confirmPassword)
             throws WrongLoginException, WrongPasswordException {
         // String login = "Winter_Whale";
         // String password ="Qwerty123";
@@ -37,7 +37,7 @@ public class Zadacha1 {
     }
 
 
-    public void main(String[] args) {
+    public static void main(String[] args) {
         try {
             boolean result = test("Winter_Whale", "password123", "password123");
             System.out.println("Результат: " + result);

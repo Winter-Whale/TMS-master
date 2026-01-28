@@ -9,11 +9,12 @@ public class Zadacha1 {
         System.out.println("Введите строку");
         Scanner scanner = new Scanner(System.in);
         String line = scanner.nextLine();
-        Pattern pattern = Pattern.compile("[A-Z]{2,6}");
+        Pattern pattern = Pattern.compile("\\b[A-ZА-ЯЁ]{2,6}\\b");
         Matcher matcher = pattern.matcher(line);
 
         while (matcher.find()) {
             System.out.println(matcher.group());
         }
+        scanner.close();
     }
 }

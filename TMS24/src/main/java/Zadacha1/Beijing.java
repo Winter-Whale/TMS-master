@@ -22,6 +22,6 @@ public class Beijing extends HttpServlet {
         ZonedDateTime beijing = ZonedDateTime.now(zoneId);
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("HH:mm:ss");
         String formattedTime = beijing.format(formatter);
-        out.println("Время в Пекине: "+formattedTime);
+        out.println("Время в Пекине: " + formattedTime);
     }
 }

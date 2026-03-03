@@ -20,6 +20,6 @@ public class Minsk extends HttpServlet {
         ZonedDateTime minsk = ZonedDateTime.now(zoneId);
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("HH:mm:ss");
         String formattedTime = minsk.format(formatter);
-        out.println("Время в Минске: "+formattedTime);
+        out.println("Время в Минске: " + formattedTime);
     }
 }

@@ -22,6 +22,6 @@ public class Washington extends HttpServlet {
         ZonedDateTime washington = ZonedDateTime.now(zoneId);
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("HH:mm:ss");
         String formattedTime = washington.format(formatter);
-        out.println("Время в Вашингтоне: "+formattedTime);
+        out.println("Время в Вашингтоне: " + formattedTime);
     }
 }

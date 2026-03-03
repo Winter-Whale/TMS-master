@@ -12,14 +12,14 @@ import java.io.PrintWriter;
 
 @WebServlet("/website")
 public class Website extends HttpServlet {
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException{
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
         resp.setContentType("text/html");
         PrintWriter out = resp.getWriter();
         String ageInput = req.getParameter("age");
         int userAge = Integer.parseInt(ageInput);
-        if(userAge >= 18){
+        if (userAge >= 18) {
             out.println("Вы совершеннолетний");
-        }else {
+        } else {
             out.println("Вы несовершеннолетний");
         }
     }
